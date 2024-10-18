@@ -1,121 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>IKARUS 2024</title>
-    <meta content="tedxvce, tedx, tedx talks, hyderabad, talks, speakers" name="keywords">
-    <meta content="TEDx is an international community that organizes TED-style events anywhere and everywhere" name="description">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,Montserrat:300,400,700" rel="stylesheet">
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures mobile responsiveness -->
+        <title>IKARUS 2024</title>
+        <meta content="tedxvce, tedx, tedx talks, hyderabad, talks, speakers" name="keywords">
+        <meta content="TEDx is an international community that organizes TED-style events anywhere and everywhere" name="description">
     
-    <style>
-        #header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: black;
-            padding: 10px 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 100%;
-            padding: 0 15px;
-        }
-
-        #logo {
-            display: flex;
-            align-items: center;
-        }
-
-        #logo img {
-            height: 40px;
-            width: auto;
-            margin-right: 10px;
-        }
-
-        #nav-menu-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            overflow-x: auto;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .nav-menu li {
-            margin-left: 10px;
-        }
-
-        .nav-menu li a {
-            color: white;
-            text-decoration: none;
-            font-size: 12px;
-            padding: 5px 8px;
-        }
-
-        .btn-pink {
-            background-color: #e61ed5;
-            color: white;
-            border-radius: 5px;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding-top: 60px;
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700|Montserrat:300,400,700" rel="stylesheet">
+    
+        <!-- Bootstrap CSS File -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Libraries CSS Files -->
+        <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+    
+        <!-- Main Stylesheet File -->
+        <link href="style.css" rel="stylesheet">
+    
+        <style>
+            /* General Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-
+    
+            /* General Styles */
+            body, html {
+                width: 100%;
+                overflow-x: hidden; /* Prevent horizontal scrolling */
+            }
+    
+            /* Header Styles */
+            #header {
+                background-color: rgb(153, 191, 225);
+                height: 85px; /* Height for desktop */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+    
+            #logo {
+                margin-left: 20px;
+                display: flex;
+                align-items: center;
+            }
+    
             #logo img {
-                height: 30px;
+                height: 90px; /* Logo size */
+                margin-right: 10px;
             }
-
-            .nav-menu {
-                justify-content: flex-start;
+    
+            nav ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
             }
-
-            .nav-menu li {
-                margin-left: 5px;
+    
+            nav ul li {
+                margin-left: 15px; /* Spacing between menu items */
             }
-
-            .nav-menu li a {
-                font-size: 11px;
-                padding: 4px 6px;
+    
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 50px 20px 15px 10px;; /* Padding for PC view */
             }
-        }
-    </style>
-</head>
+    
+            nav ul li a:hover {
+                background-color: #e61ed5;
+                border-radius: 5px;
+            }
+    
+            /* Mobile view adjustments */
+            @media (max-width: 768px) {
+                #header {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 10px;
+                }
+    
+                #logo img {
+                    height: 60px; /* Logo size for mobile */
+                }
+    
+                nav ul {
+                    flex-direction: column;
+                    margin-top: 10px;
+                }
+    
+                nav ul li {
+                    margin-left: 0;
+                    margin-bottom: 10px;
+                }
+    
+                nav ul li a {
+                    padding: 8px 12px; /* Padding for mobile */
+                }
+            }
+    
+            /* Carousel (Hero Images) */
+            .carousel-item img {
+                width: 100%;
+                height: auto;
+                max-height: 550px; /* Adjusted height for mobile */
+                object-fit: cover;
+            }
+    
+            /* Registration Section */
+            #reg h2 {
+                color: #750675;
+                text-align: center;
+            }
+    
+            #reg button {
+                background-color: #77066e;
+                color: white;
+                border-color: #e61ed5;
+                border-width: 3.5px;
+                font-size: 30px; /* Adjusted size */
+                font-weight: bold;
+                height: 100px;
+                width: 350px;
+                border-radius: 11px;
+                cursor: pointer;
+            }
+    
+            /* About Section */
+            #about {
+                background-color: black;
+                color: white;
+                background-image: url('2.gif');
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 20px;
+            }
+    
+            #about h1, #about h2 {
+                text-align: center;
+                color: white;
+            }
+    
+            #about h3 {
+                font-size: 24px;
+            }
+    
+            /* Countdown Styles */
+            #clockdiv {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+    
+            #clockdiv div {
+                margin: 0 15px;
+            }
+    
+            .smalltext {
+                font-size: 16px;
+            }
+    
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                #reg button {
+                    width: 100%;
+                    font-size: 24px;
+                    height: auto;
+                }
+    
+                #about h1, #about h2, #about h3 {
+                    font-size: 20px;
+                }
+    
+                #clockdiv {
+                    flex-direction: column;
+                }
+    
+                .contact-info {
+                    flex-direction: column;
+                }
+    
+                .contact-info div {
+                    margin-bottom: 20px;
+                }
+            }
+        </style>
+    </head>
+    
+    
+    
+    
 <body id="body" name="body">
     <header id="header">
-        <div class="header-container">
-            <div id="logo">
-                <img src="img/KGRCETlogo.png" alt="KGRCET Logo">
-                <img src="img/Ikarus_event_logo.png" alt="Ikarus Event Logo">
+        <div class="container">
+            <div id="logo" class="pull-left" style="display: flex; align-items: center;">
+                <img src="img/KGRCETlogo.png" style="height: 75px; margin-right: 10px;"> <!-- KGRCET Logo -->
+                <h1 style="margin: 0;"><a href="#body"><img src="img/Ikarus_event_logo.png" height="70px" width="135px" alt="Ikarus Event Logo"></a></h1> <!--Ikarus Logo-->
             </div>
-            <nav id="nav-menu-container">
+            <nav style="float: right;" id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="#body">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
+                    <li class="menu-active"><a href="#body">HOME</a></li>
+                    <li><a href="#aboutus">ABOUT</a></li>
                     <li><a href="#clients">PARTNERS</a></li>
                     <li><a href="#contact">VENUE</a></li>
-                    <li><a href="teams.html" class="btn-pink">COMMITTEES</a></li>
-                    <li><a href="clubs.html" class="btn-pink">CLUBS</a></li>
+                    <li><a href="teams.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">COMMITTEES</a></li> <!-- Updated to button style -->
+                    <li><a href="clubs.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">CLUBS</a></li> <!-- Updated to button style -->
                 </ul>
             </nav>
         </div>
@@ -143,19 +240,19 @@
 
     <section id="reg" class="wow fadeInUp">
         <div class="container-fluid p-0"> <!-- Changed to container-fluid and removed padding -->
-            <div class="section-header">
-                <h2 style="color: Dark rgb(117, 6, 117)">register here</h2>
-            </div>
+
             <div style="background-color:rgb(247, 244, 244);">
-                <marquee behavior="scroll" direction="left" scrollamount="5" style="background-color: #f0a50e; color: rgb(233, 18, 22); padding: 5px; width: 100% ;">
-                    REGISTRATIONS OPEN
+                <br>
+                <marquee behavior="scroll" direction="left" scrollamount="5" style="background-color: #f0a50e; color: rgb(2, 2, 2); font-size: 25px; padding: 5px; width: 100%;">
+                    <strong>REGISTRATIONS OPEN</strong>
                 </marquee>
-                <a href="clubs.html"><button style="background-color:#77066e;color:white;border-color:#e61ed5;border-width:3.5px;font-size:35px;font-weight:bold;height:120px;width:450px;padding-top:3px;border-radius: 11px;cursor: pointer;box-shadow: none;">REGISTRATIONS OPEN</button></a><br><br>
-                <p style="color: black;">All the KG Reddy College of Engineering and Technology students are requested to register offline by contacting respective faculty</p><br>
-                <p style="color: black;">Dr. S. SAI SATYANARAYANA REDDY </p>
-                <p style="color: black;">Mrs. K. UDAYA SRI </p>
-                <p style="color: black;">Mr. YEDRIE LOKESH CHANDRA</p>
-                <p style="color: black;">Mr. MOHAMMED AFRAZ AHMED</p>
+                <a href="clubs.html"><button style="background-color:#77066e;color:white;border-color:#e61ed5;border-width:3.5px;font-size:30px;font-weight:bold;height:120px;width:250px;padding-top:3px;border-radius: 11px;cursor: pointer;box-shadow: none;">REGISTRATIONS OPEN</button></a>
+                <br><br><br><br><br><br><br>
+                <h4><p style="color: black;">All the KG Reddy College of Engineering and Technology students are requested to register offline by contacting respective faculty</p></h4>
+                <h5><p style="color: black;">Dr. S. SAI SATYANARAYANA REDDY </p></h5>
+                <h5><p style="color: black;">Mrs. K. UDAYA SRI </p></h5>
+                <h5><p style="color: black;">Mr. YEDRIE LOKESH CHANDRA</p></h5>
+                <h5><p style="color: black;">Mr. MOHAMMED AFRAZ AHMED</p></h5>
             </div>
         </div><br><br><br><br>
     </section>
@@ -231,7 +328,7 @@
             const x = setInterval(updateCountdown, 1000);
         </script>
 
-        <div class="container">
+        <div id="aboutus" class="container">
             <div class="row">
                 <div class="row-lg-6 content" >
                     <div class="abc">
