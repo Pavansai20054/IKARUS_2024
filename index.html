@@ -13,47 +13,98 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <style>
     #header {
         background-color: black;
-        height: 80px;
-        display: flex; /* Added to use flexbox */
-        align-items: flex-start; /* Align items to the top */
+        padding: 10px 0;
+        width: 100%;
+    }
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
     }
     #logo {
-        margin-top: -20px; /* Adjust margin as needed */
-        margin-left: -200px;
+        display: flex;
+        align-items: center;
     }
-        th, td {
-            text-align: left;
-            padding: 8px;
-            color: white;
-        }
     #nav-menu-container {
-        margin-top: 0px; /* Adjust margin as needed */
-        margin-right: -180px;
+        display: flex;
+        align-items: center;
     }
-    .carousel-item {
-        transition: transform 1s ease, opacity 1s ease; /* Adjust the duration as needed */
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+        }
+        #logo, #nav-menu-container {
+            width: 100%;
+            margin: 10px 0;
+        }
+        #header {
+            height: auto;
+            padding: 10px 0;
+        }
+        #logo {
+            margin-left: 0;
+            text-align: center;
+            width: 100%;
+        }
+        #nav-menu-container {
+            margin-right: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav-menu li {
+            margin: 5px 0;
+        }
+        #heroCarousel .carousel-item img {
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        #reg button {
+            width: 90%;
+            font-size: 24px;
+            height: auto;
+            padding: 10px;
+        }
+        #clockdiv {
+            flex-wrap: wrap;
+        }
+        #clockdiv > div {
+            margin: 5px;
+        }
+        .contact-info .col-md-3 {
+            margin-bottom: 20px;
+        }
     }
     </style>
 </head>
 <body id="body" name="body">
     <header id="header">
-        <div class="container">
-            <div id="logo" class="pull-left" style="display: flex; align-items: center;">
-                <img src="img/KGRCETlogo.png" style="height: 75px; margin-right: 10px;"> <!-- KGRCET Logo -->
+        <div class="header-container">
+            <div id="logo">
+                <img src="img/KGRCETlogo.png" style="height: 75px; margin-right: 10px;">
                 <h1 style="margin: 0;"><a href="#body"><img src="img/Ikarus_event_logo.png" height="80px" width="200px" alt="Ikarus Event Logo"></a></h1>
             </div>
-            <nav style="float: right;" id="nav-menu-container">
+            <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="#body">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#clients">PARTNERS</a></li>
                     <li><a href="#contact">VENUE</a></li>
-                    <li><a href="teams.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">COMMITTEES</a></li> <!-- Updated to button style -->
-                    <li><a href="clubs.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">CLUBS</a></li> <!-- Updated to button style -->
+                    <li><a href="teams.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">COMMITTEES</a></li>
+                    <li><a href="clubs.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">CLUBS</a></li>
                 </ul>
             </nav>
         </div>
