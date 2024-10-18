@@ -16,95 +16,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <style>
-    #header {
-        background-color: black;
-        padding: 10px 0;
-        width: 100%;
-    }
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    #logo {
-        display: flex;
-        align-items: center;
-    }
-    #nav-menu-container {
-        display: flex;
-        align-items: center;
-    }
-    @media (max-width: 768px) {
-        .header-container {
-            flex-direction: column;
-        }
-        #logo, #nav-menu-container {
-            width: 100%;
-            margin: 10px 0;
-        }
         #header {
-            height: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
             padding: 10px 0;
+            z-index: 1000;
         }
-        #logo {
-            margin-left: 0;
-            text-align: center;
-            width: 100%;
-        }
-        #nav-menu-container {
-            margin-right: 0;
-            width: 100%;
-            text-align: center;
-        }
-        .nav-menu {
+
+        .header-container {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        #logo {
+            display: flex;
             align-items: center;
         }
+
+        #logo img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        #nav-menu-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
         .nav-menu li {
-            margin: 5px 0;
+            margin-left: 10px;
         }
-        #heroCarousel .carousel-item img {
-            height: auto;
-            max-height: 400px;
-            object-fit: cover;
+
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 5px 8px;
         }
-        #reg button {
-            width: 90%;
-            font-size: 24px;
-            height: auto;
-            padding: 10px;
+
+        .btn-pink {
+            background-color: #e61ed5;
+            color: white;
+            border-radius: 5px;
         }
-        #clockdiv {
-            flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+
+            #logo img {
+                height: 30px;
+            }
+
+            .nav-menu {
+                justify-content: flex-start;
+            }
+
+            .nav-menu li {
+                margin-left: 5px;
+            }
+
+            .nav-menu li a {
+                font-size: 11px;
+                padding: 4px 6px;
+            }
         }
-        #clockdiv > div {
-            margin: 5px;
-        }
-        .contact-info .col-md-3 {
-            margin-bottom: 20px;
-        }
-    }
     </style>
 </head>
 <body id="body" name="body">
     <header id="header">
         <div class="header-container">
             <div id="logo">
-                <img src="img/KGRCETlogo.png" style="height: 75px; margin-right: 10px;">
-                <h1 style="margin: 0;"><a href="#body"><img src="img/Ikarus_event_logo.png" height="80px" width="200px" alt="Ikarus Event Logo"></a></h1>
+                <img src="img/KGRCETlogo.png" alt="KGRCET Logo">
+                <img src="img/Ikarus_event_logo.png" alt="Ikarus Event Logo">
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="#body">HOME</a></li>
+                    <li><a href="#body">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#clients">PARTNERS</a></li>
                     <li><a href="#contact">VENUE</a></li>
-                    <li><a href="teams.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">COMMITTEES</a></li>
-                    <li><a href="clubs.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">CLUBS</a></li>
+                    <li><a href="teams.html" class="btn-pink">COMMITTEES</a></li>
+                    <li><a href="clubs.html" class="btn-pink">CLUBS</a></li>
                 </ul>
             </nav>
         </div>
