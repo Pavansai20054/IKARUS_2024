@@ -1,203 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures mobile responsiveness -->
-        <title>IKARUS 2024</title>
-        <meta content="tedxvce, tedx, tedx talks, hyderabad, talks, speakers" name="keywords">
-        <meta content="TEDx is an international community that organizes TED-style events anywhere and everywhere" name="description">
-    
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700|Montserrat:300,400,700" rel="stylesheet">
-    
-        <!-- Bootstrap CSS File -->
-        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-        <!-- Libraries CSS Files -->
-        <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-    
-        <!-- Main Stylesheet File -->
-        <link href="style.css" rel="stylesheet">
-    
-        <style>
-            /* General Reset */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-    
-            /* General Styles */
-            body, html {
-                width: 100%;
-                overflow-x: hidden; /* Prevent horizontal scrolling */
-            }
-    
-            /* Header Styles */
-            #header {
-                background-color: rgb(153, 191, 225);
-                height: 85px; /* Height for desktop */
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-            }
-    
-            #logo {
-                margin-left: 20px;
-                display: flex;
-                align-items: center;
-            }
-    
-            #logo img {
-                height: 90px; /* Logo size */
-                margin-right: 10px;
-            }
-    
-            nav ul {
-                display: flex;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-    
-            nav ul li {
-                margin-left: 15px; /* Spacing between menu items */
-            }
-    
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                padding: 50px 20px 15px 10px;; /* Padding for PC view */
-            }
-    
-            nav ul li a:hover {
-                background-color: #e61ed5;
-                border-radius: 5px;
-            }
-    
-            /* Mobile view adjustments */
-            @media (max-width: 768px) {
-                #header {
-                    flex-direction: column;
-                    height: auto;
-                    padding: 10px;
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures mobile responsiveness -->
+            <title>IKARUS 2024</title>
+            <meta content="tedxvce, tedx, tedx talks, hyderabad, talks, speakers" name="keywords">
+            <meta content="TEDx is an international community that organizes TED-style events anywhere and everywhere" name="description">
+        
+            <!-- Google Fonts -->
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700|Montserrat:300,400,700" rel="stylesheet">
+        
+            <!-- Bootstrap CSS File -->
+            <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+            <!-- Libraries CSS Files -->
+            <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+            <link href="lib/animate/animate.min.css" rel="stylesheet">
+            <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+            <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+            <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+        
+            <!-- Main Stylesheet File -->
+            <link href="style.css" rel="stylesheet">
+        
+            <style>
+                /* General Reset */
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
                 }
-    
-                #logo img {
-                    height: 60px; /* Logo size for mobile */
-                }
-    
-                nav ul {
-                    flex-direction: column;
-                    margin-top: 10px;
-                }
-    
-                nav ul li {
-                    margin-left: 0;
-                    margin-bottom: 10px;
-                }
-    
-                nav ul li a {
-                    padding: 8px 12px; /* Padding for mobile */
-                }
-            }
-    
-            /* Carousel (Hero Images) */
-            .carousel-item img {
-                width: 100%;
-                height: auto;
-                max-height: 550px; /* Adjusted height for mobile */
-                object-fit: cover;
-            }
-    
-            /* Registration Section */
-            #reg h2 {
-                color: #750675;
-                text-align: center;
-            }
-    
-            #reg button {
-                background-color: #77066e;
-                color: white;
-                border-color: #e61ed5;
-                border-width: 3.5px;
-                font-size: 30px; /* Adjusted size */
-                font-weight: bold;
-                height: 100px;
-                width: 350px;
-                border-radius: 11px;
-                cursor: pointer;
-            }
-    
-            /* About Section */
-            #about {
-                background-color: black;
-                color: white;
-                background-image: url('2.gif');
-                background-repeat: no-repeat;
-                background-size: cover;
-                padding: 20px;
-            }
-    
-            #about h1, #about h2 {
-                text-align: center;
-                color: white;
-            }
-    
-            #about h3 {
-                font-size: 24px;
-            }
-    
-            /* Countdown Styles */
-            #clockdiv {
-                display: flex;
-                justify-content: center;
-                text-align: center;
-            }
-    
-            #clockdiv div {
-                margin: 0 15px;
-            }
-    
-            .smalltext {
-                font-size: 16px;
-            }
-    
-            /* Responsive Styles */
-            @media (max-width: 768px) {
-                #reg button {
+        
+                /* General Styles */
+                body,
+                html {
                     width: 100%;
-                    font-size: 24px;
+                    overflow-x: hidden; /* Prevent horizontal scrolling */
+                }
+        
+                /* Header Styles */
+                #header {
+                    background-color: rgb(153, 191, 225);
+                    height: 85px; /* Height for desktop */
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+        
+                #logo {
+                    margin-left: 20px;
+                    display: flex;
+                    align-items: center;
+                }
+        
+                #logo img {
+                    height: 90px; /* Logo size */
+                    margin-right: 10px;
+                }
+        
+                nav ul {
+                    display: flex;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                nav ul li {
+                    margin-left: 15px; /* Spacing between menu items */
+                }
+        
+                nav ul li a {
+                    color: white;
+                    text-decoration: none;
+                    padding: 50px 20px 15px 10px; /* Padding for PC view */
+                }
+        
+                nav ul li a:hover {
+                    background-color: #e61ed5;
+                    border-radius: 5px;
+                }
+        
+                /* Mobile view adjustments */
+                @media (max-width: 768px) {
+                    #header {
+                        flex-direction: column;
+                        height: auto;
+                        padding: 10px;
+                    }
+        
+                    #logo img {
+                        height: 60px; /* Logo size for mobile */
+                    }
+        
+                    nav ul {
+                        flex-direction: column;
+                        margin-top: 10px;
+                    }
+        
+                    nav ul li {
+                        margin-left: 0;
+                        margin-bottom: 10px;
+                    }
+        
+                    nav ul li a {
+                        padding: 8px 12px; /* Padding for mobile */
+                    }
+        
+                    /* Adjustments for Partners Section */
+                    #partners .partners-container {
+                        display: flex;
+                        flex-direction: column; /* Stack images vertically by default */
+                        align-items: center; /* Center images horizontally */
+                        width: 100%; /* Ensure container takes full width */
+                    }
+        
+                    #partners .partners-container img {
+                        width: 80%; /* Adjust width for better fit */
+                        height: auto; /* Maintain aspect ratio */
+                        margin: 0 auto; /* Center images */
+                    }
+                }
+        
+                /* Carousel (Hero Images) */
+                .carousel-item img {
+                    width: 100%;
                     height: auto;
+                    max-height: 550px; /* Adjusted height for mobile */
+                    object-fit: cover;
                 }
-    
-                #about h1, #about h2, #about h3 {
-                    font-size: 20px;
+        
+                /* Registration Section */
+                #reg h2 {
+                    color: #750675;
+                    text-align: center;
                 }
-    
+        
+                #reg button {
+                    background-color: #77066e;
+                    color: white;
+                    border-color: #e61ed5;
+                    border-width: 3.5px;
+                    font-size: 30px; /* Adjusted size */
+                    font-weight: bold;
+                    height: 100px;
+                    width: 350px;
+                    border-radius: 11px;
+                    cursor: pointer;
+                }
+        
+                /* About Section */
+                #about {
+                    background-color: black;
+                    color: white;
+                    background-image: url('2.gif');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 20px;
+                }
+        
+                #about h1,
+                #about h2 {
+                    text-align: center;
+                    color: white;
+                }
+        
+                #about h3 {
+                    font-size: 24px;
+                }
+        
+                /* Countdown Styles */
                 #clockdiv {
-                    flex-direction: column;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
                 }
-    
-                .contact-info {
-                    flex-direction: column;
+        
+                #clockdiv div {
+                    margin: 0 15px;
                 }
-    
-                .contact-info div {
-                    margin-bottom: 20px;
+        
+                .smalltext {
+                    font-size: 16px;
                 }
-            }
-        </style>
-    </head>
+        
+                /* Responsive Styles */
+                @media (max-width: 768px) {
+                    #reg button {
+                        width: 100%;
+                        font-size: 24px;
+                        height: auto;
+                    }
+        
+                    #about h1,
+                    #about h2,
+                    #about h3 {
+                        font-size: 20px;
+                    }
+        
+                    #clockdiv {
+                        flex-direction: column;
+                    }
+        
+                    .contact-info {
+                        flex-direction: column;
+                    }
+        
+                    .contact-info div {
+                        margin-bottom: 20px;
+                    }
+                }
+        
+                /* Partners Section Styles */
+                #partners .partners-container {
+                    display: flex;
+                    flex-wrap: wrap; /* Allow wrapping for cards */
+                    justify-content: center; /* Center align the cards */
+                }
+        
+                #partners .section-header {
+                    text-align: center; /* Center the heading */
+                    width: 100%; /* Ensure it takes full width */
+                    margin-bottom: 20px; /* Spacing below the heading */
+                }
+        
+                #partners .partners-container .card {
+                    margin: 20px;
+                    width: calc(33.33% - 40px); /* 3 cards in a row on desktop */
+                    text-align: center;
+                    border: none; /* Hide card borders */
+                }
+        
+                @media (max-width: 768px) {
+                    #partners .partners-container .card {
+                        width: 100%; /* Full width on mobile */
+                        margin: 10px 0; /* Adjust margin for better spacing */
+                    }
+                }
+            </style>
+        </head>    
     
-    
-    
-    
+     
 <body id="body" name="body">
     <header id="header">
         <div class="container">
@@ -209,7 +254,7 @@
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="#body">HOME</a></li>
                     <li><a href="#aboutus">ABOUT</a></li>
-                    <li><a href="#clients">PARTNERS</a></li>
+                    <li><a href="#partners">PARTNERS</a></li>
                     <li><a href="#contact">VENUE</a></li>
                     <li><a href="teams.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">COMMITTEES</a></li> <!-- Updated to button style -->
                     <li><a href="clubs.html" style="background-color:#e61ed5;color:white;border-radius:5px;padding:10px;">CLUBS</a></li> <!-- Updated to button style -->
@@ -354,20 +399,29 @@
         </div>
         <div>
             <a href="clubs.html">
-                <p style="color:white;"><b>Thinkers. Doers. Idea-generators. These are the clubs for the second season of tedxvce.</b></p>
-            </a>
-            <a href="clubs.html">
                 <button style="background-color:#e61ec5;color:white;border-color:#e61e99;font-weight:bold;height:46px;padding-top:3px;border-radius: 6px;cursor: pointer;">CLUBS ARE HERE &#8594</button>
+            <br><br><br>
             </a>
         </div>
     </section>
 
-    <section id="clients" name="clients" class="wow fadeInUp">
-        <div class="container">
+    <section id="partners" name="partners">
+        <div class="partners-container">
             <div class="section-header">
                 <h2 style="color: #e61ec5">PARTNERS</h2>
-                <p style="color:white;"><b>Our improvisational entity of the ideas worth spreading adores the sponsorship support for this build up.<br>Join us for this imagination festive; help us build the beyonds.</b></p>
             </div>
+    
+            <!-- Card 1 -->
+            <div class="card" style="margin: 20px; width: 300px; text-align: center;">
+                <img src="img/partners_logo/nxtwave_logo.png" alt="Partner 1" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="card" style="margin: 20px; width: 300px; text-align: center;">
+                <img src="img/partners_logo/asset_1.png" alt="Partner 2" style="width: 100%; height: 150px; border-radius: 8px;">
+            </div>
+            
+            <br><br><br>
         </div>
     </section>
 
